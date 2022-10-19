@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Card from './components/Card';
+const data = [
+  {
+    title: "Pen",
+    price: "25",
+    color: "blue",
+    date: new Date(2019,11,8),
+  },
+  {
+    title: "Paper",
+    price: "35",
+    color: "white",
+    date: new Date(2020,6,4),
+  },
+  {
+    title: "Apple",
+    price: "80",
+    color: "red",
+    date: new Date(2021,2,12),
+  },
+];
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {data.map(({title, price, color, date}) => {
+        return (
+          <div>
+            <Card title={title} price={price} color={color} date={date}/>
+          </div>
+        )
+      })}
     </div>
   );
 }
