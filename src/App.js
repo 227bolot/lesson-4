@@ -36,3 +36,12 @@ function App() {
 }
 
 export default App;
+
+x = 10
+x = 10;
+y = x
+y = x;
+z = x + 1
+j +=2;
+
+
